@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    tools:context="charis.Triviality_3.,.SplashAct"
+    tools:ignore="MergeRootFrame" >
+
+    <ImageView
+        android:id="@+id/IvPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/splash" />
+
+    <TextView
+        android:id="@+id/TvLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:text="ΜΟΥΣΙΚΗ"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/TvLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:text="Ένα τεστ μουσικών γνώσεων..."
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/TvLine3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:text="... από την Δημητρία Πουρνάρα"
+        android:textSize="18sp" />
+
+</LinearLayout>
+<!-- From: file:/home/charis/Desktop/Triviality_3/app/src/main/res/layout/splashlayout.xml -->

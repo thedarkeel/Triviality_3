@@ -1,0 +1,225 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ResultsMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="charis.Triviality_3.diss.ResultsAct"
+    tools:ignore="MergeRootFrame" >
+
+    <TableLayout
+        android:id="@+id/Table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/TableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/TvSTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_span="2"
+                android:text="ΑΠΟΤΕΛΕΣΜΑΤΑ"
+                android:textSize="25sp"
+                android:textColor="#FF0000"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="2dp"
+                android:text="ΕΠΙΠΕΔΟ ΔΥΣΚΟΛΙΑΣ"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/RF2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="2dp"
+                android:text="ΣΥΝΟΛΟ ΕΡΩΤΗΣΕΩΝ :"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/RF3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="2dp"
+                android:text="ΑΠΑΝΤΗΘΗΚΑΝ :"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/RF4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="2dp"
+                android:text="ΣΩΣΤΕΣ ΑΠΑΝΤΗΣΕΙΣ :"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/RF5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="2dp"
+                android:text="ΛΑΘΟΣ ΑΠΑΝΤΗΣΕΙΣ :"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/RF6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="2dp"
+                android:text="ΧΡΟΝΟΣ ΕΞΕΤΑΣΗΣ :"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/RF7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="2dp"
+                android:text="ΒΑΘΜΟΛΟΓΙΑ :"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/RF8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/BtRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp"
+        android:text="Νέο"
+        android:textSize="20sp" />
+
+</LinearLayout>
+<!-- From: file:/home/charis/Desktop/Triviality_3/app/src/main/res/layout/resultslayout.xml -->
