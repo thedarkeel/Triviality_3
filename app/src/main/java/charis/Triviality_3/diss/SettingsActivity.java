@@ -23,7 +23,7 @@ public class SettingsActivity extends Activity implements OnClickListener
     protected void onCreate (Bundle savedInstanceState)
     {
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.settingslay);
+        setContentView (R.layout.settingslayout);
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         BtStart = (Button) findViewById (R.id.BtStart);
         RbTeach = (RadioButton) findViewById (R.id.RbTeach);

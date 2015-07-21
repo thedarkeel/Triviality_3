@@ -47,7 +47,7 @@ public class MainActivity extends Activity implements OnClickListener
     {
         Intent iint;
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.mainlay);
+        setContentView (R.layout.mainlayout);
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         NoQ = 10;
         MaxErrors = 3;

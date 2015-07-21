@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -17,7 +15,7 @@ import android.widget.Toast;
 
 public class SplashActivity extends Activity implements OnClickListener
 {
-    LinearLayout LL;
+    LinearLayout LinearLayout;
     boolean DbFlag = false;
 
     @Override
@@ -26,8 +24,8 @@ public class SplashActivity extends Activity implements OnClickListener
         super.onCreate (savedInstanceState);
         setContentView (R.layout.splashlayout);
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        LL = (LinearLayout) findViewById (R.id.LinLay);
-        LL.setOnClickListener (this);
+        LinearLayout = (LinearLayout) findViewById (R.id.LinearSplash);
+        LinearLayout.setOnClickListener(this);
         CheckDB ();
     }
 
@@ -36,16 +34,16 @@ public class SplashActivity extends Activity implements OnClickListener
     {
         if (DbFlag)
         {
-            Intent NA = new Intent (this, SettingsActivity.class);
-            startActivity (NA);
+            Intent intent = new Intent (this, SettingsActivity.class);
+            startActivity (intent);
             finish ();
         }
     }
     
     private void CheckDB ()
     {
-        InputStream Src;
-        OutputStream Dest;
+        InputStream Input;
+        OutputStream Output;
         File DF = getApplicationContext ().getDatabasePath ("Database.db");
         byte[] Buff;
         int r;
@@ -54,13 +52,13 @@ public class SplashActivity extends Activity implements OnClickListener
             if (!DF.exists ())
             {
                 getApplicationContext ().getDatabasePath ("Database.db").getParentFile ().mkdir ();
-                Src = getAssets ().open ("Database.db");
-                Dest = new FileOutputStream (DF);
+                Input = getAssets ().open ("Database.db");
+                Output = new FileOutputStream (DF);
                 Buff = new byte[1024];
-                while ((r = Src.read (Buff)) > 0)
-                    Dest.write (Buff, 0,  r);
-                Src.close ();
-                Dest.close ();
+                while ((r = Input.read (Buff)) > 0)
+                    Output.write (Buff, 0,  r);
+                Input.close();
+                Output.close();
                 Toast.makeText (getApplicationContext (), "Copy OK!", Toast.LENGTH_LONG).show ();
             }
             DbFlag = true;

@@ -34,7 +34,7 @@ public final class R {
         public static final int BtStart=0x7f08002d;
         public static final int LayMain=0x7f080000;
         public static final int LaySettings=0x7f080024;
-        public static final int LinLay=0x7f08002e;
+        public static final int LinearSplash=0x7f08002e;
         public static final int PbTime=0x7f080001;
         public static final int RF2=0x7f080010;
         public static final int RF3=0x7f080013;
@@ -80,9 +80,9 @@ public final class R {
         public static final int textView8=0x7f080021;
     }
     public static final class layout {
-        public static final int mainlay=0x7f030000;
+        public static final int mainlayout=0x7f030000;
         public static final int resultslayout=0x7f030001;
-        public static final int settingslay=0x7f030002;
+        public static final int settingslayout=0x7f030002;
         public static final int splashlayout=0x7f030003;
     }
     public static final class string {
