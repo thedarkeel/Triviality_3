@@ -46,7 +46,7 @@ public class ResultsActivity extends Activity implements OnClickListener
         TvR8 = (TextView) findViewById (R.id.RF8);
         BtRestart = (Button) findViewById (R.id.BtRestart);
         BtRestart.setOnClickListener (this);
-        LlR.setBackgroundResource (R.drawable.maskres1);
+        //LlR.setBackgroundResource (R.drawable.maskres1);
         ShowData ();            
     }
     

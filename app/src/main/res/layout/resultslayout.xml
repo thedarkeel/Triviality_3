@@ -27,7 +27,7 @@
                 android:layout_span="2"
                 android:text="ΑΠΟΤΕΛΕΣΜΑΤΑ"
                 android:textSize="25sp"
-                android:textColor="#FF0000"
+                android:textColor="#000000"
                 android:textStyle="bold" />
 
         </TableRow>
@@ -102,7 +102,7 @@
                 android:id="@+id/RF4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
         </TableRow>
@@ -127,7 +127,7 @@
                 android:id="@+id/RF5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
         </TableRow>
@@ -152,7 +152,7 @@
                 android:id="@+id/RF6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
         </TableRow>
@@ -177,7 +177,7 @@
                 android:id="@+id/RF7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
         </TableRow>
@@ -202,7 +202,7 @@
                 android:id="@+id/RF8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
         </TableRow>
