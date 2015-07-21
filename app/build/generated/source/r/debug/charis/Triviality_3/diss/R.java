@@ -26,12 +26,12 @@ public final class R {
         public static final int maskres1=0x7f020005;
         public static final int set1=0x7f020006;
         public static final int splash=0x7f020007;
+        public static final int teilogo=0x7f020008;
     }
     public static final class id {
         public static final int BtOK=0x7f080009;
         public static final int BtRestart=0x7f080023;
         public static final int BtStart=0x7f08002d;
-        public static final int IvPicture=0x7f08002f;
         public static final int LayMain=0x7f080000;
         public static final int LaySettings=0x7f080024;
         public static final int LinLay=0x7f08002e;
@@ -61,16 +61,15 @@ public final class R {
         public static final int TvAns2=0x7f080006;
         public static final int TvAns3=0x7f080007;
         public static final int TvAns4=0x7f080008;
-        public static final int TvLine1=0x7f080030;
-        public static final int TvLine2=0x7f080031;
-        public static final int TvLine3=0x7f080032;
         public static final int TvQuest=0x7f080003;
         public static final int TvSTitle=0x7f08000d;
         public static final int TvTitle=0x7f080002;
         public static final int scrollView1=0x7f080004;
+        public static final int splashscreen=0x7f08002f;
         public static final int tableRow1=0x7f080026;
         public static final int tableRow2=0x7f080027;
         public static final int tableRow3=0x7f08002a;
+        public static final int textView=0x7f080030;
         public static final int textView1=0x7f080028;
         public static final int textView2=0x7f08000f;
         public static final int textView3=0x7f080012;
@@ -89,12 +88,16 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f070000;
         public static final int app_name=0x7f070001;
-        public static final int hello_world=0x7f070002;
-        public static final int title_activity_main=0x7f070003;
-        public static final int title_activity_results=0x7f070004;
-        public static final int title_activity_setting=0x7f070005;
-        public static final int title_activity_settings=0x7f070006;
-        public static final int title_activity_splash=0x7f070007;
+        public static final int choose_answer=0x7f070002;
+        public static final int splash_screen_text=0x7f070003;
+        public static final int title_activity_intro=0x7f070004;
+        public static final int title_activity_main=0x7f070005;
+        public static final int title_activity_result=0x7f070006;
+        public static final int title_activity_results=0x7f070007;
+        public static final int title_activity_setting=0x7f070008;
+        public static final int title_activity_settings=0x7f070009;
+        public static final int title_activity_splash=0x7f07000a;
+        public static final int title_activity_splash_screen=0x7f07000b;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

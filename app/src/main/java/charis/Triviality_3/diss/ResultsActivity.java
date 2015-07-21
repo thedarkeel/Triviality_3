@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class ResultsAct extends Activity implements OnClickListener
+public class ResultsActivity extends Activity implements OnClickListener
 {
     LinearLayout LlR;
     TextView TvR2;
@@ -101,7 +101,7 @@ public class ResultsAct extends Activity implements OnClickListener
     @Override
     public void onClick (View v)
     {
-        Intent ri = new Intent (this, SettingsAct.class);
+        Intent ri = new Intent (this, SettingsActivity.class);
         startActivity (ri);    
     }
 }

@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="charis.Triviality_3.diss.SplashAct"
+            android:name="charis.Triviality_3.diss.SplashActivity"
             android:label="@string/title_activity_splash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,15 +23,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="charis.Triviality_3.diss.MainAct"
+            android:name="charis.Triviality_3.diss.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:name="charis.Triviality_3.diss.ResultsAct"
+            android:name="charis.Triviality_3.diss.ResultsActivity"
             android:label="@string/title_activity_results" >
         </activity>
         <activity
-            android:name="charis.Triviality_3.diss.SettingsAct"
+            android:name="charis.Triviality_3.diss.SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
     </application>

@@ -17,7 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainAct extends Activity implements OnClickListener
+public class MainActivity extends Activity implements OnClickListener
 {
     final int ComGreen = 1;
     final int ComNext = 2;
@@ -116,7 +116,7 @@ public class MainAct extends Activity implements OnClickListener
         TvQuest.setText (Data[N].Quest);
         for (i = 0; i < 4; i++)
         {
-            TvAns[i].setTextColor (Color.rgb (0xFF, 0xFF, 0xFF));
+            TvAns[i].setTextColor (Color.rgb (0, 0, 0));
             TvAns[i].setText (Data[N].Ans[i]);
         }
         BtOK.setEnabled (false);
@@ -180,9 +180,9 @@ public class MainAct extends Activity implements OnClickListener
         Selected = A;
         for (i = 0; i < 4; i++)
             if (i == Selected)
-                TvAns[i].setTextColor (Color.rgb (250, 250, 140));
+                TvAns[i].setTextColor (Color.rgb (0, 132, 202));
             else
-                TvAns[i].setTextColor (Color.rgb (255, 255, 255));
+                TvAns[i].setTextColor (Color.rgb (0, 0, 0));
         BtOK.setEnabled (true);
     }
     
@@ -213,7 +213,7 @@ public class MainAct extends Activity implements OnClickListener
         Bu.putInt ("Wrong", MissQuest);
         Bu.putInt ("UsedTime", ElapsedTime);
         Bu.putBoolean ("IsTeaching", Teach);
-        inres = new Intent (this, ResultsAct.class);
+        inres = new Intent (this, ResultsActivity.class);
         inres.putExtras (Bu);
         startActivity (inres);
         finish ();

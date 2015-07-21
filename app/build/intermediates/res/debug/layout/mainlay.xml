@@ -3,9 +3,8 @@
     android:id="@+id/LayMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back1"
     android:orientation="vertical"
-    tools:context="charis.Triviality_3.diss.MainAct"
+    tools:context="charis.Triviality_3.diss.MainActivity"
     tools:ignore="MergeRootFrame" >
 
     <ProgressBar
@@ -27,7 +26,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -38,7 +37,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="25sp" />
 
     <ScrollView
@@ -59,7 +58,7 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="25sp" />
 
             <TextView
@@ -69,7 +68,7 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="25sp" />
 
             <TextView
@@ -89,7 +88,7 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="25sp" />
 
         </LinearLayout>

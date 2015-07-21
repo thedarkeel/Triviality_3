@@ -33,7 +33,7 @@ ADDED from AndroidManifest.xml:11:5
 		ADDED from AndroidManifest.xml:13:9
 	android:theme
 		ADDED from AndroidManifest.xml:15:9
-activity#charis.Triviality_3.diss.SplashAct
+activity#charis.Triviality_3.diss.SplashActivity
 ADDED from AndroidManifest.xml:16:9
 	android:label
 		ADDED from AndroidManifest.xml:18:13
@@ -49,19 +49,19 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:22:17
 	android:name
 		ADDED from AndroidManifest.xml:22:27
-activity#charis.Triviality_3.diss.MainAct
+activity#charis.Triviality_3.diss.MainActivity
 ADDED from AndroidManifest.xml:25:9
 	android:label
 		ADDED from AndroidManifest.xml:27:13
 	android:name
 		ADDED from AndroidManifest.xml:26:13
-activity#charis.Triviality_3.diss.ResultsAct
+activity#charis.Triviality_3.diss.ResultsActivity
 ADDED from AndroidManifest.xml:29:9
 	android:label
 		ADDED from AndroidManifest.xml:31:13
 	android:name
 		ADDED from AndroidManifest.xml:30:13
-activity#charis.Triviality_3.diss.SettingsAct
+activity#charis.Triviality_3.diss.SettingsActivity
 ADDED from AndroidManifest.xml:33:9
 	android:label
 		ADDED from AndroidManifest.xml:35:13

@@ -15,9 +15,7 @@ import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import charis.Triviality_3.diss.SettingsAct;
-
-public class SplashAct extends Activity implements OnClickListener 
+public class SplashActivity extends Activity implements OnClickListener
 {
     LinearLayout LL;
     boolean DbFlag = false;
@@ -38,7 +36,7 @@ public class SplashAct extends Activity implements OnClickListener
     {
         if (DbFlag)
         {
-            Intent NA = new Intent (this, SettingsAct.class);
+            Intent NA = new Intent (this, SettingsActivity.class);
             startActivity (NA);
             finish ();
         }

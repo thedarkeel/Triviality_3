@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
-public class SettingsAct extends Activity implements OnClickListener
+public class SettingsActivity extends Activity implements OnClickListener
 {
 
     Button BtStart;
@@ -52,7 +52,7 @@ public class SettingsAct extends Activity implements OnClickListener
                 RbTeach.setChecked (true);
         if (v == BtStart)
         {
-            Intent ns = new Intent (this, MainAct.class);
+            Intent ns = new Intent (this, MainActivity.class);
             Bundle Bu = new Bundle ();
             Teach = RbTeach.isChecked ();
             Level = SpLevel.getSelectedItemPosition ();
