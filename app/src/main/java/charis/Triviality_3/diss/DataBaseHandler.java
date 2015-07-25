@@ -13,7 +13,7 @@ public class DataBaseHandler
     int Kateg;
     int NoQs;
     String DbName;
-    QData[] Data;
+    QuestionData[] Data;
 
     public DataBaseHandler (int K, int NQ, String Fn)
     {
@@ -21,7 +21,7 @@ public class DataBaseHandler
         DbName = Fn;
         Kateg = K;
         NoQs = NQ;
-        Data = new QData [NoQs];
+        Data = new QuestionData[NoQs];
         try
         {
             DB = SQLiteDatabase.openDatabase (Fn, null, SQLiteDatabase.OPEN_READONLY);
@@ -92,13 +92,13 @@ public class DataBaseHandler
             Que2 = new String [] {String.valueOf (Sel[i])};
             rs = DB.rawQuery (Que1, Que2);
             rs.moveToFirst ();
-            Data[i] = new QData ();
-            Data[i].Quest = rs.getString (1);
-            Data[i].Ans[0] = rs.getString (2);
-            Data[i].Ans[1] = rs.getString (3);
-            Data[i].Ans[2] = rs.getString (4);
-            Data[i].Ans[3] = rs.getString (5);
-            Data[i].Corr = rs.getInt (6) - 1;
+            Data[i] = new QuestionData();
+            Data[i].Question = rs.getString (1);
+            Data[i].Answer[0] = rs.getString (2);
+            Data[i].Answer[1] = rs.getString (3);
+            Data[i].Answer[2] = rs.getString (4);
+            Data[i].Answer[3] = rs.getString (5);
+            Data[i].Correct = rs.getInt (6) - 1;
             Data[i].Kateg = rs.getInt (7);
             rs.close ();
         }
@@ -116,19 +116,19 @@ public class DataBaseHandler
             {
                 s1 = Ra.nextInt (4);
                 s2 = Ra.nextInt (4);
-                tmp = Data[i].Ans[s1];
-                Data[i].Ans[s1] = Data[i].Ans[s2];
-                Data[i].Ans[s2] = tmp;
-                if (Data[i].Corr == s2)
-                    Data[i].Corr = s1;
+                tmp = Data[i].Answer[s1];
+                Data[i].Answer[s1] = Data[i].Answer[s2];
+                Data[i].Answer[s2] = tmp;
+                if (Data[i].Correct == s2)
+                    Data[i].Correct = s1;
                 else 
-                    if (Data[i].Corr == s1)
-                        Data[i].Corr = s2;   
+                    if (Data[i].Correct == s1)
+                        Data[i].Correct = s2;
             }
         }
     }
 
-    QData[] GetData ()
+    QuestionData[] GetData ()
     {
         DB.close ();
         return Data;
@@ -136,20 +136,20 @@ public class DataBaseHandler
     }
 }
 
-class QData
+class QuestionData
 {
-    String Quest;
-    String[] Ans;
+    String Question;
+    String[] Answer;
     int Kateg;
-    int Corr;
+    int Correct;
     int Guess;
     int Time;
 
-    QData ()
+    QuestionData()
     {
-        Quest = null;
-        Ans = new String [4];
-        Ans[3] = Ans[2] = Ans[1] = Ans[0] = null;
+        Question = null;
+        Answer = new String [4];
+        Answer[3] = Answer[2] = Answer[1] = Answer[0] = null;
         Guess = -1;
         Time = 0;
     }

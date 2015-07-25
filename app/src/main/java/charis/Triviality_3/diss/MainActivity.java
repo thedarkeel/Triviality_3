@@ -26,14 +26,14 @@ public class MainActivity extends Activity implements OnClickListener
     TextView TvTitle;
     TextView TvQuest;
     TextView[] TvAns;
-    Button BtOK;
-    QData[] Data;
+    Button OKbutton;
+    QuestionData[] Data;
     int Kateg;
     boolean Teach;
     int NoQ;
     int MaxErrors;
-    int TotTime;
-    int CurQuest;
+    int TotalTime;
+    int CurrentQuestion;
     int DoneQuest;
     int MissQuest;
     int ElapsedTime;
@@ -45,16 +45,16 @@ public class MainActivity extends Activity implements OnClickListener
     @Override
     protected void onCreate (Bundle savedInstanceState)
     {
-        Intent iint;
-        super.onCreate (savedInstanceState);
+        Intent intent;
+        super.onCreate(savedInstanceState);
         setContentView (R.layout.mainlayout);
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        NoQ = 10;
+        NoQ = 5;
         MaxErrors = 3;
-        TotTime = 90;
-        iint = getIntent ();
-        Kateg = iint.getIntExtra ("Kategory", 0);
-        Teach = iint.getBooleanExtra ("IsTeaching", false);
+        TotalTime = 90;
+        intent = getIntent ();
+        Kateg = intent.getIntExtra ("Kategory", 0);
+        Teach = intent.getBooleanExtra ("IsTeaching", false);
         //Toast.makeText (getApplicationContext(), "*" + Kateg + "*" + Teach + "*", Toast.LENGTH_LONG).show ();
         SetViews ();
         CreateTest ();
@@ -71,12 +71,12 @@ public class MainActivity extends Activity implements OnClickListener
         TvAns[1] = (TextView) findViewById (R.id.TvAns2);
         TvAns[2] = (TextView) findViewById (R.id.TvAns3);
         TvAns[3] = (TextView) findViewById (R.id.TvAns4);
-        BtOK = (Button) findViewById (R.id.BtOK);
+        OKbutton = (Button) findViewById (R.id.BtOK);
         TvAns[0].setOnClickListener (this);
         TvAns[1].setOnClickListener (this);
         TvAns[2].setOnClickListener (this);
         TvAns[3].setOnClickListener (this);
-        BtOK.setOnClickListener (this);
+        OKbutton.setOnClickListener(this);
         if (Teach)
         {
             MainTimer = null;
@@ -85,7 +85,7 @@ public class MainActivity extends Activity implements OnClickListener
         else
         {
             PbTime.setVisibility (ProgressBar.VISIBLE);
-            PbTime.setMax (TotTime);
+            PbTime.setMax (TotalTime);
             PbTime.setProgress (ElapsedTime);
             MainTimer = new Timer ();
             MainTimer.schedule (new PbTask (), 1000, 1000);
@@ -102,10 +102,10 @@ public class MainActivity extends Activity implements OnClickListener
     void InitTest ()
     {
         DoneQuest = 0;
-        CurQuest = 0;
+        CurrentQuestion = 0;
         MissQuest = 0;
         ElapsedTime = 0;
-        ShowQuest (CurQuest);
+        ShowQuest (CurrentQuestion);
     }
 
     void ShowQuest (int N)
@@ -113,13 +113,13 @@ public class MainActivity extends Activity implements OnClickListener
         int i;
         Selected = -1;
         TvTitle.setText ("Ερώτηση " + (N + 1));
-        TvQuest.setText (Data[N].Quest);
+        TvQuest.setText (Data[N].Question);
         for (i = 0; i < 4; i++)
         {
             TvAns[i].setTextColor (Color.rgb (0, 0, 0));
-            TvAns[i].setText (Data[N].Ans[i]);
+            TvAns[i].setText (Data[N].Answer[i]);
         }
-        BtOK.setEnabled (false);
+        OKbutton.setEnabled(false);
         CanPress = true;
 
     }
@@ -128,7 +128,7 @@ public class MainActivity extends Activity implements OnClickListener
     public void onClick (View v)
     {
         int i;
-        if (v == BtOK)
+        if (v == OKbutton)
         {
             OKPressed ();
             return;
@@ -141,10 +141,10 @@ public class MainActivity extends Activity implements OnClickListener
 
     void OKPressed ()
     {
-        BtOK.setEnabled (false);
+        OKbutton.setEnabled(false);
         CanPress = false;
         DoneQuest++; 
-        if (Selected != Data[CurQuest].Corr)
+        if (Selected != Data[CurrentQuestion].Correct)
             MissQuest++;
         if (Teach)
         {
@@ -160,15 +160,15 @@ public class MainActivity extends Activity implements OnClickListener
      
     void NextQuest ()
     {
-        CurQuest++;
-        if (CurQuest == NoQ)
+        CurrentQuestion++;
+        if (CurrentQuestion == NoQ)
         {
             ToResults ();
             finish ();
         }   
         else
         {
-            ShowQuest (CurQuest);
+            ShowQuest (CurrentQuestion);
         }
     }
     
@@ -183,7 +183,7 @@ public class MainActivity extends Activity implements OnClickListener
                 TvAns[i].setTextColor (Color.rgb (0, 132, 202));
             else
                 TvAns[i].setTextColor (Color.rgb (0, 0, 0));
-        BtOK.setEnabled (true);
+        OKbutton.setEnabled(true);
     }
     
     void SendMessage (int Ms)
@@ -198,7 +198,7 @@ public class MainActivity extends Activity implements OnClickListener
     void ToResults ()
     {   
         Bundle Bu;
-        Intent inres;
+        Intent intent;
         Toast.makeText (getApplicationContext(), "ΤΕΛΟΣ", Toast.LENGTH_LONG).show ();
         if (MainTimer != null)
         {
@@ -213,16 +213,16 @@ public class MainActivity extends Activity implements OnClickListener
         Bu.putInt ("Wrong", MissQuest);
         Bu.putInt ("UsedTime", ElapsedTime);
         Bu.putBoolean ("IsTeaching", Teach);
-        inres = new Intent (this, ResultsActivity.class);
-        inres.putExtras (Bu);
-        startActivity (inres);
+        intent = new Intent (this, ResultsActivity.class);
+        intent.putExtras(Bu);
+        startActivity (intent);
         finish ();
     }
     
     void UpdTimer ()
     {
         PbTime.setProgress (ElapsedTime);
-        if (ElapsedTime == TotTime)
+        if (ElapsedTime == TotalTime)
             ToResults ();   
     }
     
@@ -235,8 +235,8 @@ public class MainActivity extends Activity implements OnClickListener
             switch (Comm)
             {
                 case ComGreen:
-                    TvAns[Data[CurQuest].Corr].setTextColor (Color.rgb (0, 255, 0));
-                    BtOK.setEnabled (false);
+                    TvAns[Data[CurrentQuestion].Correct].setTextColor (Color.rgb (0, 255, 0));
+                    OKbutton.setEnabled(false);
                     break;
                 case ComNext:
                     NextQuest ();
@@ -270,7 +270,7 @@ public class MainActivity extends Activity implements OnClickListener
         {
             ElapsedTime++;
             SendMessage (ComTimer);
-            if (ElapsedTime == TotTime)
+            if (ElapsedTime == TotalTime)
                 cancel ();
         }
     }

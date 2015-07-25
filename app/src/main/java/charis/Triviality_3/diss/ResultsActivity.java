@@ -52,8 +52,8 @@ public class ResultsActivity extends Activity implements OnClickListener
     
     void GetData ()
     {
-        Intent Imp = getIntent ();
-        Bundle Bu = Imp.getExtras ();
+        Intent intent = getIntent ();
+        Bundle Bu = intent.getExtras ();
         Kateg = Bu.getInt ("Kategory");
         NoQ = Bu.getInt ("NumberOfQuestrions");
         Answered = Bu.getInt ("Answered");
@@ -101,7 +101,7 @@ public class ResultsActivity extends Activity implements OnClickListener
     @Override
     public void onClick (View v)
     {
-        Intent ri = new Intent (this, SettingsActivity.class);
-        startActivity (ri);    
+        Intent intent = new Intent (this, SettingsActivity.class);
+        startActivity (intent);
     }
 }
